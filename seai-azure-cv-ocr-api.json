@@ -1,66 +1,66 @@
 {
-	"info": {
-		"_postman_id": "8e2e46af-c8ba-4e94-83fb-96a476c1e98c",
-		"name": "seai",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-	},
-	"item": [
-		{
-			"name": "https://seai-image-caption.cognitiveservices.azure.com/vision/v3.2/ocr?language=en&detectOrientation=true&model-version=latest",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "default"
-					},
-					{
-						"key": "Ocp-Apim-Subscription-Key",
-						"value": "4znB7UDNVdESI3n8KRpz6RZNua4vsutMdmZPNnxMWgcdMZZH6xrLJQQJ99AKACqBBLyXJ3w3AAAFACOG55Bv", 
-						"type": "default"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\"url\":\"https://raw.githubusercontent.com/your-username/your-repository/main/616ABADD-FEED-44DD-885E-19B933946F82_1_105_c.jpeg\"}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "https://seai-image-caption.cognitiveservices.azure.com/vision/v3.2/ocr?language=en&detectOrientation=true&model-version=latest",
-					"protocol": "https",
-					"host": [
-						"seai-image-caption",
-						"cognitiveservices",
-						"azure",
-						"com"
-					],
-					"path": [
-						"vision",
-						"v3.2",
-						"ocr"
-					],
-					"query": [
-						{
-							"key": "language",
-							"value": "en"
-						},
-						{
-							"key": "detectOrientation",
-							"value": "true"
-						},
-						{
-							"key": "model-version",
-							"value": "latest"
-						}
-					]
-				}
-			},
-			"response": []
-		}
-	]
+    "info": {
+        "_postman_id": "8e2e46af-c8ba-4e94-83fb-96a476c1e98c",
+        "name": "seai",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Analyze Image Text",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json",
+                        "type": "default"
+                    },
+                    {
+                        "key": "Ocp-Apim-Subscription-Key",
+                        "value": "4znB7UDNVdESI3n8KRpz6RZNua4vsutMdmZPNnxMWgcdMZZH6xrLJQQJ99AKACqBBLyXJ3w3AAAFACOG55Bv",
+                        "type": "default"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"url\": \"https://raw.githubusercontent.com/iqbalzulsafari/my-git-project/main/sample-image.jpeg\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "https://wid3014-practical-ai.cognitiveservices.azure.com/vision/v3.2/ocr?language=en&detectOrientation=true&model-version=latest",
+                    "protocol": "https",
+                    "host": [
+                        "wid3014-practical-ai",
+                        "cognitiveservices",
+                        "azure",
+                        "com"
+                    ],
+                    "path": [
+                        "vision",
+                        "v3.2",
+                        "ocr"
+                    ],
+                    "query": [
+                        {
+                            "key": "language",
+                            "value": "en"
+                        },
+                        {
+                            "key": "detectOrientation",
+                            "value": "true"
+                        },
+                        {
+                            "key": "model-version",
+                            "value": "latest"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
 }

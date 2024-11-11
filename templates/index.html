@@ -4,6 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
     <h1>API Documentation</h1>
@@ -11,7 +31,7 @@
     <section>
         <h2>Overview</h2>
         <p>
-            This API allows you to analyze images by sending a GET request to the endpoint.
+            This API allows you to analyze images by sending a POST request to the endpoint. The analysis extracts any text present in the image using Azure's Computer Vision OCR service.
         </p>
     </section>
 
@@ -25,16 +45,27 @@
     <section>
         <h2>Request</h2>
         <p>
-            To analyze an image, send a GET request with a JSON object containing a single field <code>"uri"</code> pointing to the image to be analyzed.
+            To analyze an image, send a POST request with a JSON object containing a single field <code>"url"</code> pointing to the image to be analyzed.
         </p>
-        <pre>
-            <code>
-{
-    "uri": "path/to/your/image.jpg"
-}
-            </code>
-        </pre>
+        <pre><code>{
+    "url": "https://github.com/iqbalzulsafari/my-git-project/blob/main/sample-image.jpeg"
+}</code></pre>
     </section>
 
+    <section>
+        <h2>Response</h2>
+        <p>
+            If the request is successful, the API will return a JSON response with the extracted text from the image.
+        </p>
+        <pre><code>{
+    "text": "Extracted text from the image"
+}</code></pre>
+        <p>
+            In case of an error, an error message will be returned:
+        </p>
+        <pre><code>{
+    "error": "An error occurred during image analysis"
+}</code></pre>
+    </section>
 </body>
 </html>
