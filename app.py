@@ -7,28 +7,25 @@ app = Flask(__name__, template_folder='templates')
 def home():
     return render_template('index.html')
 
-
 # API at /api/v1/analysis/ 
-@app.route("/api/v1/analysis/", methods=['GET'])
+@app.route("/api/v1/analysis/", methods=['POST'])
 def analysis():
-    # Try to get the URI from the JSON
     try:
-        get_json = request.get_json()
-        image_uri = get_json['uri']
-    except:
-        return jsonify({'error': 'Missing URI in JSON'}), 400
-    
-    # Try to get the text from the image
-    try:
-        res = read_image(image_uri)
+        # Try to get the URI from the JSON body
+        data = request.get_json()
+        image_uri = data.get('uri')
         
-        response_data = {
-            "text": res
-        }
-    
-        return jsonify(response_data), 200
-    except:
-        return jsonify({'error': 'Error in processing'}), 500
+        if not image_uri:
+            return jsonify({'error': 'No image URI provided'}), 400
+        
+        # Attempt to read the image using the Azure API
+        result = read_image(image_uri)
+        return jsonify({"text": result}), 200
+
+    except Exception as e:
+        # Log the error for debugging (in production, log this to a file or monitoring service)
+        print(f"Error: {e}")
+        return jsonify({'error': 'An error occurred during image analysis'}), 500
 
 
 if __name__ == "__main__":

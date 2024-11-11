@@ -17,13 +17,13 @@
 					},
 					{
 						"key": "Ocp-Apim-Subscription-Key",
-						"value": "",
+						"value": "4znB7UDNVdESI3n8KRpz6RZNua4vsutMdmZPNnxMWgcdMZZH6xrLJQQJ99AKACqBBLyXJ3w3AAAFACOG55Bv", 
 						"type": "default"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"url\":\"http://jeroen.github.io/images/testocr.png\"}",
+					"raw": "{\"url\":\"https://raw.githubusercontent.com/your-username/your-repository/main/616ABADD-FEED-44DD-885E-19B933946F82_1_105_c.jpeg\"}",
 					"options": {
 						"raw": {
 							"language": "json"
