@@ -16,8 +16,8 @@
                         "type": "default"
                     },
                     {
-                        "key": "Ocp-Apim-Subscription-Key",
-                        "value": "4znB7UDNVdESI3n8KRpz6RZNua4vsutMdmZPNnxMWgcdMZZH6xrLJQQJ99AKACqBBLyXJ3w3AAAFACOG55Bv",
+                        "key": "AZURE_SUBSCRIPTION_KEY",
+                        "value": "AZURE_SUBSCRIPTION_KEY",
                         "type": "default"
                     }
                 ],
@@ -31,7 +31,7 @@
                     }
                 },
                 "url": {
-                    "raw": "https://wid3014-practical-ai.cognitiveservices.azure.com/vision/v3.2/ocr?language=en&detectOrientation=true&model-version=latest",
+                    "raw": "https://wid3014-practical-ai.cognitiveservices.azure.com/vision/v3.2/ocr",
                     "protocol": "https",
                     "host": [
                         "wid3014-practical-ai",
